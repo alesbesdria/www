@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Revision javascript</h1>
+    <form name="test" method="GET" action="">
+    <div>
+        <label for="texte">Saisir un texte</label>
+        <textarea id="texte" name="texte"></textarea>
+    </div>
+    <div>
+        <label for="compteur">
+            <input type="number" name="compteur" id="compteur" readonly>
+        </label>
+    </div>
+    <div>
+        <label for="couleur">Changer la couleur</label>
+        <input type="color" name="couleur">
+    </div>
+    <button type="button" name="test" disabled="disabled">Envoyer</button>
+    <button type="submit" name="submit">Bouton submit</button>
+</form>
+    <div id="message">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

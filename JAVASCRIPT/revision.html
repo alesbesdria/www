@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Javascript</title>
+</head>
+<body>
+    <div id="retour"></div>
+    <form name="revision" method="POST" action="">
+        <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom">
+        </div>
+        <div>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom">
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+            <button type="button" name="gen_pass" id="gen_pass">Générer</button>
+        </div>
+        <div>
+            <label for="presentation">Présentation</label>
+            <textarea name="presentation" id="presentation"></textarea>
+            <input type="number" id="nb_car" disabled>
+        </div>
+        <button type="submit" name="submit" id="submit">Envoyer</button>
+    </form>
+    <script src="revision.js"></script>
+</body>
+</html>

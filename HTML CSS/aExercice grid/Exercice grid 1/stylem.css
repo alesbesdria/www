@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini&display=swap');
+
+
+
+header{
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/img/texture-1306790_1920.jpg);
+    grid-column: 1/5;
+    grid-row: 1;
+    display: flex;
+    color: aliceblue;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    grid-column: 1/5;
+    grid-row: 5;
+    position: relative;
+    bottom: 0;
+}
+
+header, footer{
+    width: 100%;
+}
+
+footer{
+    background-image: url(assets/img/texture-1306790_1920.jpg);
+    height: 100px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer > a{
+    height: 40px;
+    text-decoration: none;
+}
+
+
+main{
+    margin: 0;
+    padding: 0;
+    grid-column: 2/5;
+    grid-row: 2/5;
+    background-image: url(assets/img/banner-2143662.jpg);
+    background-size: cover;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Jaini", system-ui;
+}
+
+a{
+    display: inline-block;
+}
+
+article > p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+article > h1{
+    font-size: 40px;
+}
+
+article > h1{
+    font-size: 40px;
+}
+
+aside{
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none;
+    color: aliceblue; */
+    width: 250px;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    background-image: url(assets/img/banner-2143662.jpg);
+    background-size: cover;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: 50px;
+}
+
+li{
+    border: 2mm ridge rgba(212, 212, 212, 0.525);
+    background-color: rgb(138, 138, 138);
+    padding: 3px;    
+    margin: 10px;
+    font-weight: bold;
+    font-size: 35px;
+    border-radius: 10px;
+}
+
+a > img{
+    width: 50px;
+}
+
+
+.logo
+{
+    margin: 0;
+    border: red solid 2px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    display: flex;
+    align-self: flex-start;
+}
+.logo:hover{
+    border-radius: 50%; 
+}
+
+
+.marque{
+    display: flex;
+}
+.ensemble{
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 50px;
+}
+
+
+.ref{
+    margin: 20px;
+    width: 200px;
+}
+
+.grid-container{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns:auto auto auto auto ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "header nav nav nav"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer footer";
+}
+
+.navas{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav{
+    text-decoration: none;
+    color: black;
+}
+
+
+.icones{
+    display: flex;
+    justify-content: center;
+}
+
+.mentions{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mentions >a{
+    color: aliceblue;
+    width: 200px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.serv{
+    width: 150px;
+    height: auto;
+}
+
+/* 
+.serv{
+    position:absolute;
+    left: 180px;
+    top: 34px;}
+     
+.style{
+    position:absolute;
+    left: 18px;
+    top: 31px;
+    font-family: Gabriola, "Gentium Basic", Georgia;
+    font-size: 50px;
+    color: #FFFFFF;
+    color:#FFFFFF;
+} */
+
+nav a:hover{
+    animation: tilt-shaking 0.2s infinite;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+@media screen and (max-width: 649px) {
+    *{
+        overflow-x: hidden;
+    }
+    .full-width-img {
+    margin: auto;
+    width: 90%;
+    }
+    aside{
+        display: none;
+    }
+    main{
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav{
+        width: 70%;
+    }
+    article{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

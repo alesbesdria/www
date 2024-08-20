@@ -1,0 +1,35 @@
+<!--
+     Implémenter la logique pour ajouter des images et afficher l'image agrandie.
+     L'utilisateur ajoute l'url de l'image, l'image vient s'afficher dans la div gallery.
+     Lorsque l'utilisateur clique sur l'image celle-ci vient se placer dans la div lightbox
+     La div lightbox doit alors s'afficher et se cacher lors du clic sur le bouton close.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie d'Images</title>
+  <link rel="stylesheet" href="galerie.css">
+</head>
+
+<body>
+  <div class="gallery-container">
+    <h1>Galerie d'Images</h1>
+    <input type="text" id="imageUrlInput" placeholder="URL de l'image...">
+    <button id="addImageBtn">Ajouter</button>
+    <div id="gallery">
+
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox hidden">
+    <span class="close">&times;</span>
+    <img id="lightboxImage" src="" alt="Image agrandie">
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+//MODIFICATION DIV CLASS (couleur + taille)
+
+let bla = document.getElementById('couleur');
+let blu = document.getElementsByClassName('apercu_couleur');
+
+bla.addEventListener("input", () => {
+    // document.body.style.backgroundColor = document.getElementById("couleur").value;
+    blu[0].style.backgroundColor = document.getElementById("couleur").value;
+})
+
+let coloring = document.getElementsByClassName('apercu_couleur');
+coloring[0].style.width = '100px';
+coloring[0].style.height = '100px';
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// MELANGE DE MOT DE PASSE :
+
+const tabNum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const tabCar = ["&", "#", "@", "%", "§", "=", "*", "!"];
+const tabMin = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const tabMaj = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+function mixNum() {
+    let newtabNum = [];
+    let longueurMdp = 12;
+    for (let i = 0; i <= longueurMdp; i++) {
+        newtabNum.push(tabNum[Math.floor(Math.random() * tabNum.length)]);
+    }
+    return newtabNum;
+}
+
+function mixCar() {
+    let newtabCar = [];
+    let longueurMdp = 12;
+    for (let i = 0; i <= longueurMdp; i++) {
+        newtabCar.push(tabCar[Math.floor(Math.random() * tabCar.length)]);
+    }
+    return newtabCar;
+}
+
+function mixMin() {
+    let newtabMin = [];
+    let longueurMdp = 12;
+    for (let i = 0; i <= longueurMdp; i++) {
+        newtabMin.push(tabMin[Math.floor(Math.random() * tabMin.length)]);
+    }
+    return newtabMin;
+}
+
+function mixMaj() {
+    let newtabMaj = [];
+    let longueurMdp = 12;
+    for (let i = 0; i <= longueurMdp; i++) {
+        newtabMaj.push(tabMaj[Math.floor(Math.random() * tabMaj.length)]);
+    }
+    return newtabMaj;
+}
+
+function createMdp() {
+    let mdp = [];
+    let listCara = mixCar();
+    let listNum = mixNum();
+    let listMin = mixMin();
+    let listMaj = mixMaj();
+    let longueurMdp = 4;
+
+    for (let i = 0; i < longueurMdp; i++) {
+        mdp.push(listCara[i]);
+        mdp.push(listNum[i]);
+        mdp.push(listMin[i]);
+        mdp.push(listMaj[i]);
+    }
+    return mdp;
+}
+
+// GENERE LE MOT DE PASSE (fonction repeter : ne marche pas!!)
+
+function gen() {
+    let mdp = createMdp();
+        for (let i = 0; i < mdp.length; i++) {
+            document.getElementById('password').value += mdp[i];
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let aff = document.getElementById('genererPassword');
+let generi = document.getElementById('password');
+let generii = document.getElementById('password2');
+let generiii = document.getElementById('password_login');
+
+aff.addEventListener('click', ()=>{
+    generi.value = ""
+    generi.value = gen();
+    generii.value = generi.value;
+    generiii.value = generii.value;
+});
+
+// // FONCTION COPIE EMAIL (presque sauf le prevent default)
+
+// let mail = document.getElementById('email');
+// let maillog = document.getElementById('email_login');
+
+// mail.addEventListener('keyup', (e)=>{
+//     e.preventDefault();
+//     maillog.value += mail.value;
+// });
+
+
+// // REPETER MDP
+// let aff = document.getElementById('genererPassword');
+
+// let generii = document.getElementById('password2');
+// let generiii = document.getElementById('password_login');
+
+// /////////////////////A REVOIRRRRRRRR!!!//////////
+
+
+// // AFFICHAGE DU MDP AU CLICK DE VOIR ...
+
+
+// let generi = document.getElementById('password');
+generi.value = aff.addEventListener("click", gen());
+
+// TOUJOURS IMPOSSIBLE DE SELECTIONNER CE FOUTU NAME
+
+let boutonvoir = document.getElementsByName('voirPassword');
+
+// console.log(boutonvoir);
+
+boutonvoir.addEventListener('click', ()=>{
+    generi.type = "text";
+    console.log(generi.type);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // FONCTION VERIF
+
+
+
+// // function verif() {
+// //     let mdpp = document.getElementById('password2').value;
+// //     let mdp = document.getElementById('password').value;
+// //     let email = document.getElementById('email').value;
+
+// //     if (mdpp != '' && mdp != '' && email != '') {
+// //         document.getElementById('password2').disabled = false;
+// //         document.getElementById('password').disabled = false;
+// //         document.getElementById('email').disabled = false;
+// //     }
+// //     return true;
+// // }
+// function verif() {
+//     let mdpp = document.getElementById('password2').value;
+//     let mdp = document.getElementById('password').value;
+//     let email = document.getElementById('email').value;
+
+//     if (mdpp == true && mdp == true && email == true) {
+//         document.getElementsByName('submit').enabled = "enabled";
+//     }
+//     return true;
+// }
+
+
+// // OBJET CONSTRUCTEUR SUR CONNECTION
+
+// function Client(mail, mdp) {
+//     this.mail= mail,
+//     this.mdp= mdp,
+//     this.liste= function(){
+//         return 'Le client : '+ this.mail + ' a pour mot de passe : ' + this.mdp;
+//     }
+// };
+
+// let client1 = new Client('mail', 'mdp');
+// let client2 = new Client('mail', 'mdp');
+// let client3 = new Client('mail', 'mdp');
+
+// // FAIRE UN JQUERY

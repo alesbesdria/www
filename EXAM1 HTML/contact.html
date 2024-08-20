@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLABLABLABLABLABLABLA</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="gridcontainer">
+
+        <header>
+            <div class="accueil">
+                <div class="ensicon">
+                    <a class="logo" href="index.html"><img src="assets/icone/ai-generated-8543458_640.webp" alt="logo"
+                            id="logo"></a>
+                    <a class="contact" href="contact.html"><img src="assets/icone/whatsapp-2071331_640.webp"
+                            alt="contact" id="contact"></a>
+                </div>
+                <h1 class="titrep">E.T.</h1>
+            </div>
+            <div class="adropos">
+                <div class="adresse">
+                    <address>Adresse: <br> 666, Highway to Hell <br>45000 PARADISE</address>
+                </div>
+                <a class="lienapropos" id="lienapropos" href="apropos.html">A propos de nous !</a>
+
+            </div>
+        </header>
+
+        <nav>
+            <a class="galerie" id="galerie" href="galerie.html">GALERIE</a>
+        </nav>
+
+        <main>
+            <!-- FORMULAIRE DE CONTACT -->
+
+            <form class="form" action="contact" method="POST">
+                <div class="item1">
+                    <div>
+                        <div class="nouscontacter">Nous contacter : <br> <br></div>
+                        <fieldset>
+                            <legend>Civilité</legend>
+                            <div>
+                                <input type="radio" id="homme" name="civilité" checked>
+                                <label for="homme">Homme</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="femme" name="civilité">
+                                <label for="femme">Femme</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="autres" name="civilité">
+                                <label for="autres">Autres</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input placeholder="Votre nom" type="text" id="nom" name="nom" required>
+                        </div>
+                        <div>
+                            <label for="prenom">Prénom</label>
+                            <input placeholder="Votre prénom" type="text" id="prenom" name="prenom" required>
+                        </div>
+                    </div>
+                    <div class="item2">
+                        <div>
+                            <label for="telephone">Téléphone</label>
+                            <input placeholder="0238000102" type="tel" id="telephone" name="telephone"
+                                pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
+                            <div>
+                                <label for="email">Email</label>
+                                <input placeholder="zzz@zzz.com" type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="item3">
+                            <div class="infos1">
+                                <div>
+                                    <label for="sujet">Sujet</label>
+                                    <input placeholder="Sujet du message" type="text" id="sujet"
+                                        name="--Objet de votre demande--" required>
+                                </div>
+                                <div class="message">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" cols="30" rows="10"
+                                        placeholder="Ecrivez votre message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item4">
+                            <label for="rgpd"></label>
+                            <fieldset>
+                                <legend>Veuillez accepter le Règlement Général sur la Protection des Données</legend>
+                                <div>
+                                    <input type="checkbox" id="rgpd" name="rgpd" checked required>
+                                    <label for="rgpd"></label>
+                                </div>
+                                <label for="submit"></label>
+                                <div class="button">
+                                    <button type="submit" id="submit">Envoyer le message</button>
+                                </div>
+                                <label for="reset"></label>
+                                <div class="button">
+                                    <button type="reset" id="reset">Réinitialiser le formulaire</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <div class="mentions">
+                <a href="mentions.html">Mentions légales</a>
+                <a href="mentions.html">CGV</a>
+                <a href="mentions.html">Politique Générale</a>
+            </div>
+            <div class="icones">
+                <a class="soc" href="https://www.facebook.com/"><img src="assets/icone/Facebook.png"
+                        alt="bouton facebook" id="facebook"></a>
+                <a class="soc" href="https://twitter.com/?lang=fr"><img src="assets/icone/twitter.png"
+                        alt="bouton twitter" id="twitter"></a>
+                <a class="soc" href="https://www.instagram.com/"><img src="assets/icone/instagram.png"
+                        alt="bouton instagram" id="instagram"></a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

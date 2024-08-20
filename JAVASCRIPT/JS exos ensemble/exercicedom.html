@@ -1,0 +1,45 @@
+<!--
+    Exercices JS
+    - Créer une fonction javascript pour changer le fond du body en fonction de la couleur sélectionner dans le champs
+    - Créer une fonction javascript pour générer un mot de passe aléatoire en mélangeant des caractères spéciaux et des chiffres
+    - A la soumission du formulaire vérifier que les champs sont tous remplit. Si c'est le cas désactiver les champs
+    - Au clic sur le bouton ajouter fichier dupliquer le champs type file dans la div upload
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice DOM</title>
+</head>
+<body>
+    <h1>Exercice DOM</h1>
+    <form name="javascript" method="POST">
+        <div>
+            <label for="color">Choisir la couleur de fond</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+            <button type="button" name="genere_password" id="genere_password">Générer</button>
+        </div>
+        <div id="up">
+            <label>Fichier</label>
+            <input type="file" name="fichier[]">
+        </div>
+        <div id="upload">
+            
+        </div>
+        <button type="submit" name="submit">Envoyer</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script type="text/javascript"
+    src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=pCbLgm94N_5SVFakp2fMNr3-gHW0l8FABKtIEQbZw82Kmg3pSZy7OH_QtJTAuDzgNfeA-wCZ-46fLJReHga3v5pE9q89_wzQBiY3ozrGPuF1QEoqKUty4p6umtBp3w8O_dJLC8EDUTzNpZjFz8ep5jvQ32SsFGgzSVZWXb2j0g5EAt-nxi1yud_cHZcwBYMgkdkF2ZumYm0RhGJrJ0S1zlFofSbrvr730On99jKJPJW-Bs8YPNJ7BuZbl69611QzdTC0K5ygIYjYWcsv7vMt8iMy4U7-KsccK42zuy83xpHBAUo5D7JEZeggDC1m15-6zl_ZWKRE5Z-iJ0Lq0SKe5CbpyRuBfGUQvGvtuweHgYE-w2vxoNbEoeFqwrM2o6ywEIiW1EVbGs0_AKqaNFGpj1N7BPSwMAYCnZEmVhS8wOyKJr5njcZ756NWk5-zjZV73FkOO-fcnIxp52OU8JFmpmGb7P_Sy-ytoVXMEzyYACyu0n8gr1ubxHSuShND0lgXOqlBv0Y97Ncky0LzPJKV2tOz0tIVCyp0p2ghUxpwvYYH7LGXqr4aHU5EVUjVtcHt-_Ts8IZf-fdazYsSOs-BlCBA2nV5obBuH0Er48pV4_jPvJe2uwiN7E3jgJIjwY-Zn0T-mttHNxbGuMP1Xv43ZGJm6H1PKYZLL7YyuWRcKGRfPEfXEnFMLB5gFL_ykk7adVnC45zshJBcPOs-1e98lm0foKcq8Pm6R4B-mmYtwzhE0RxQPnYa_BoD8PIQuRm1jHOmiw5Q_ILz803WHJ2ODcQEBS5SP6v5i2ndgijKCNDz9-O5UaTh9k5LngxPvY4v37xP_swAg64g7h9ZEFaqpH5pppvtWBAnf8D8zUxqvypndNPpO4Q0rBqEsrG0AH9tDI6WRd0H5L4m0lJelM5l58IACl_dWRdmNjvjrz1mluRjdYoqrjDOV2KTZsOe1dzJNUifr7hhxjZpH4RVm0FRYldjazQTpMrwJdGDFWq49hVUJco6atSLdkDuM-huvVACCw7l0ra2o1xKQaGcaD0hsbZDDck4uUxoHIX5_q-hTnQ5muo2f2P77q6WxU25xLFdb_FMeb0wJAssGZCrdzKXbYQQs3TGAhknpjpGoq3aggKKKDkFht9w_n0T9LzC51q5lr5vbOPwZ-o84uoXO33qmuwoPQChkrgeZxhwICeaKdHtHxb2GpyeODLYJq1R4TqqV_Y5aN3-U9_7uCjqvQ9ZbwKF40_w1pX3KlQca_f3_sb0lX2nENhbcrDJEXOByLweJbkYahLUQYOeV5ABNEuBpk1KTg9Oqr3VWOib5VhM-aEkJQa6OOG16dUduFI3jVEJ-FRmUsXs4ta0Z2LFBCa8Dw"
+    charset="UTF-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h1">Formulaire de contact</h1>
+      </div>
+      <form name="login" method="POST" action="formulaire.php" id="login">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" class="form-input" placeholder="Votre nom">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" class="form-control" />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="email">Sujet</label>
+            <input type="text" name="sujet" id="sujet" class="form-control" />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" class="form-control"></textarea>
+            <input type="number" name="nb_carac" readonly>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" name="submit" id="submit" disabled="disabled" class="btn btn-success">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="exam.js"></script>
+
+</body>
+
+</html>

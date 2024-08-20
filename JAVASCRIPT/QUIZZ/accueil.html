@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quizz.css">
+</head>
+
+<body>
+    <form class="formconnect" action="contact" method="POST">
+        <div>
+            <label for="email">Email</label>
+            <input placeholder="example@example.com" type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="mdp">Mot de passe</label>
+            <input placeholder=" " type="password" id="password" name="password" required>
+        </div>
+        <div class="button">
+            <button type="submit" id="connect">Connexion</button>
+            <!-- BOUTON CONNEXION ENVOIE sur page formateur OU sur page stagiaire -->
+            <!-- CONDITION : Veuillez d'abord vous inscrire -->
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div class="button">
+            <button type="submit" id="inscription">Inscription</button>
+            <!-- BOUTON CONNEXION ENVOIE sur page formateur OU sur page stagiaire -->
+        </div>
+    </form>
+    <script src="quizz.js"></script>
+</body>
+
+</html>

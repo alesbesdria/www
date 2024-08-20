@@ -1,0 +1,82 @@
+SELECT COUNT(parrain_id IS NOT NULL) AS nbr_filleul, id, (SELECT pseudo FROM membres WHERE membres.id IS NULL)
+FROM membres
+WHERE (membres.id = parrain_id IS NULL) = parrain_id IS NOT NULL
+GROUP BY pseudo;
+
+
+
+WHERE parrain_id is null
+
+groupby COUNT(parrain_id = parrain_id)
+
+--------------------------------
+SELECT pseudo, (SELECT COUNT(id) FROM membres  AS filleul WHERE membres.id = parrain_id) AS compteur_filleul
+FROM membres
+HAVING compteur_filleul > 0;
+----------------------------------
+------------------------------------------------------------
+ALTER TABLE membres
+ADD statut ENUM('silver','gold')
+***
+UPDATE membres SET statut = "silver"
+***
+
+membre + de 100 en 2022 en gold
+
+UPDATE membres SET statut = 'gold'
+WHERE id IN (
+    SELECT membre_id 
+    FROM commande 
+    WHERE date_commande 
+    BETWEEN '2022-01-01' AND '2022-12-31'
+	GROUP BY membre_id
+    HAVING SUM(montant_commande) > 100
+)
+
+------------------------------------------------------------
+
+suppr membres pas de filleuls et pas de commandes id = null
+
+DELETE FROM commande
+WHERE membre_id = 0 AND (SELECT pseudo FROM membres WHERE id = 0)
+
+
+
+
+DELETE FROM membres
+WHERE id
+NOT IN
+(
+    SELECT membre_id
+    FROM commande
+    GROUP BY membre_id
+)
+AND id
+NOT IN 
+(
+	SELECT parrain_id
+    FROM membres
+    WHERE parrain_id IS NOT NULL
+    GROUP BY parrain_id
+)
+
+
+UPDATE membres
+SET parrain_id = 
+(
+	SELECT membre_id
+    FROM commande
+    GROUP BY membre_id
+    HAVING SUM(montant_commande) > 150
+    ORDER BY SUM(montant_commande) DESC
+    LIMIT 1
+)
+WHERE id IN(
+	SELECT membre_id
+    FROM commande
+    GROUP BY membre_id
+    HAVING SUM(montant_commande) < 150
+)
+
+
+

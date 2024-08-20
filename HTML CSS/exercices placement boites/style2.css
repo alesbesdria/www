@@ -1,0 +1,9 @@
+.box{
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    position: absolute;
+    background-color: red;
+    top: 40%;
+    left: 45%;
+}

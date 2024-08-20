@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox multiple</title>
+</head>
+<body>
+    <h1>Traitement de Checkbox multiple</h1>
+    <form name="manger" method="POST" action="checkbox.php">
+        <div>
+            <input type="checkbox" name="repas[]" value="Porc Caramel"><label>Porc Caramel</label>
+            <br>
+            <input type="checkbox" name="repas[]" value="Tajine"><label>Tajine</label>
+            <br>
+            <input type="checkbox" name="repas[]" value="Choucroute"><label>Choucroute</label>
+        </div>
+        <button type="submit" name="submit">Envoyer</button>
+    </form>
+</body>
+</html>

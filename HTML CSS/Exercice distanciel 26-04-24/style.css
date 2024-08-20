@@ -1,0 +1,280 @@
+header{
+    background: no-repeat;
+    background-size: 45%;
+    background-position: center;
+    background-image: url(assets/images/rose3.jpg);
+}
+footer{
+    margin: 2em;
+    position: static;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    text-decoration-color: #DB4B86;
+    height: 60px;
+    background-image: url(assets/images/capt.png);
+}
+main{
+    color: hsl(335, 67%, 58%);
+    font-family: "Lato", sans-serif;
+}
+.hh{
+    background-image: url(assets/images/cana.jpg);
+    background-attachment: fixed;
+}
+.hhh{
+    font-size: 30px;
+    text-decoration: underline rgb(14, 69, 221);
+    color: rgb(122, 169, 250);
+}
+.ensemble2{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.titrehommes{
+    margin-left: 35px;
+    margin-right: 40px;
+}
+.bigcontain{
+    background-image: url(assets/images/canap.png);
+    background-attachment: fixed;
+    background-size: 100%;
+    .achat{
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        margin: 100px;
+        flex-direction: column;
+        justify-content:  center;
+        align-items: center;
+    }
+}
+.imgachat{
+margin-bottom: 80px;
+}
+.accueillog{
+    img{
+    display: flex;
+    justify-content: flex-start;
+    height: 150px;
+    width: 150px;
+    }
+}
+.panier{
+    display: flex;
+    justify-content: flex-end;
+    height: 140px;
+    width: 140px;
+}
+.marque{
+    color: #DB4B86;
+    font-size: 30px;
+    box-sizing: content-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Lugrasimo", cursive;
+}
+.videoh{
+    display: flex;
+    justify-content: flex-end;
+}
+ul li{
+    list-style-type: none;
+}
+nav{
+    background-image: url(assets/images/capt.png);
+}
+h1{
+    text-decoration: underline;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.listprod{
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
+}
+.section1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+}
+.section2{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end ;
+}
+img:hover{
+    filter: contrast(85%);
+}
+.bigcontain{
+    img:hover{
+        transform: scale(1.06);
+    }
+}
+.image{
+    border: #DB4B86 solid 2px;
+    flex-wrap: wrap;
+    height: 350px;
+    margin: 20px;
+}
+a{
+    color: #DB4B86;
+    font-size: 30px;
+    text-decoration: none;
+}
+.titres{
+    font-size: 30px;
+    text-decoration: underline;
+}
+.images{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container{
+    font-weight: bold;
+    font-size: 30px;
+}
+@media screen and (min-width: 1000px){
+    .listprodmin{
+        display: none;
+    }
+}
+
+/*-----------------------------------------------*/
+
+@media (min-width: 650px) and (max-width: 1000px) {
+    *{
+        overflow-x: hidden;
+    }
+    .full-width-img {
+    margin: auto;
+    width: 90%;
+    }
+    .listprod{
+        display: none;
+    }
+    video{
+        width: 300px;
+    }
+     .femmes{
+        text-decoration: underline;
+        display: flex;
+        justify-items: center;
+    }
+    .titrehommes{
+        text-align: center;
+    }
+    .titrehommes{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .titrefemmes{
+        text-decoration: underline;
+    }
+    .titrehommes{
+        text-decoration: underline;
+    }
+    .section1{
+        border: solid 2px #DB4B86;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .section2{
+        border: solid 2px #DB4B86;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/*-----------------------------------------------*/
+
+
+@media screen and (max-width: 650px) {
+    *{
+        overflow-x: hidden;
+    }
+    .full-width-img {
+    margin: auto;
+    width: 90%;
+    }
+    .sstitre{
+        font-size: 20px;
+    }
+    .container{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .image{
+        width: 40%;
+        height: 40%;
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+.accueil{
+    text-decoration: underline;
+    font-size: 20px;
+}
+.panier{
+    height: 60px;
+}
+.accueillog{
+    img{
+        height: 60px;
+        width: 60px;
+    }
+}
+.imgachat{
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+header{
+    background-size: 120%;
+}
+.listprod{
+    display: none;
+}
+video{
+    width: 200px;
+}
+.marque{
+    font-size: 25px;
+}
+.titrefemmes{
+    text-decoration: underline;
+    font-size: 25px;
+}
+.titrehommes{
+    text-decoration: underline;
+    font-size: 25px;
+}
+.titrehommes{
+        margin: 0;
+    }
+.listprodmin{
+        display: flex;
+        justify-content: center;
+}
+}

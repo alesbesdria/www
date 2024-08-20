@@ -1,0 +1,24 @@
+EXERCICE 1:
+
+Sélectionnez tous les clients et leurs commandes associées.
+Affichez les clients qui n'ont pas passé de commandes.
+Obtenez le montant total dépensé par chaque client.
+
+SELECT SUM(montant), nom
+FROM commandes
+JOIN clients ON clients.id = commandes.client_id
+GROUP BY client_id;
+
+
+
+EXERCICE 5: Jointures avec Conditions Complexes
+
+Sélectionnez les employés du département "Informatique" avec un salaire supérieur à 50000.
+Affichez les employés qui ne sont pas affectés à un département.
+Obtenez le nombre total d'employés dans chaque département avec un salaire supérieur à 40000.
+
+SELECT * 
+FROM departements
+JOIN employes
+ON employes.departement_id = departements.id
+WHERE employes.salaire > 50000 AND departements.nom = 'informatique'

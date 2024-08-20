@@ -1,0 +1,63 @@
+CREATE DATABASE EntrepriseVoitures
+
+CREATE TABLE Clients (
+ID INT PRIMARY KEY AUTO_INCREMENT,
+Nom VARCHAR(150) NOT NULL,
+Prenom VARCHAR(150) NOT NULL,
+Email VARCHAR(150) unique NOT NULL,
+Telephone VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE Voitures (
+ID INT PRIMARY KEY  AUTO_INCREMENT,
+Marque VARCHAR(150) NOT NULL,
+Modele VARCHAR(150) NOT NULL,
+Année INT(4) NOT NULL,
+Prix DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE Ventes ( 
+ID INT PRIMARY KEY  AUTO_INCREMENT, 
+ClientID INT(8), 
+VoitureID INT(8), 
+FOREIGN KEY (ClientID) REFERENCES clients(ID), 
+FOREIGN KEY (VoitureID) REFERENCES voitures(ID), 
+DateVente DATE 
+);
+
+INSERT INTO clients (Email, NOM,Prenom,Telephone) VALUES ('lili2@gmail.fr','MM2','lili2','0614756981');
+
+
+VALUES ('','',''),
+('','',''),
+('','','');
+
+
+
+
+UPDATE clients
+SET Telephone = '0238353672'
+WHERE prenom = 'lili';
+
+UPDATE voitures
+SET Prix = Prix + (Prix *5 /100
+)
+
+SELECT YEAR(DateVente),  COUNT(*) FROM ventes GROUP BY DateVente;
+
+SELECT CONCAT(Nom, '-', Prenom), Email
+FROM clients;
+
+SELECT *
+FROM ventes
+WHERE date_inscription BETWEEN ‘2024-01-01’ AND CURRENT_DATE
+
+SELECT *
+FROM ventes
+WHERE DateVente BETWEEN '2024-01-01' AND CURRENT_DATE() LIMIT 1;
+
+OU ...
+
+SELECT *
+FROM ventes
+WHERE DateVente > DATE_ADD(NOW(), INTERVAL -6 MONTH);

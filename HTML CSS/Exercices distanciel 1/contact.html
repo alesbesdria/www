@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/ai-generated-8463482_640.jpg" id="logo-amethyste">
+        </div>
+        <nav class="desktop">
+            <a class="menu" id="accueil" href="index.html">Menu accueil</a>
+            <a class="menu" id="Galerie" href="galerie.html">Galerie</a>
+            <a class="menu" id="Contact" href="contact.html">Contact</a>
+            <a class="menu" id="Nos services" href="services.html">Nos services</a>
+        </nav>
+        <nav class="mobile">
+            <select name="menuderoule" id="Menu déroulant">
+                <option value="Menu">--Menu--</option>
+                <option value="index">Accueil</option>
+                <option value="galerie">Galerie</option>
+                <option value="contact">Contact</option>
+                <option value="services">Services</option>
+            </select>
+        </nav>
+    </header>
+    <form action="Contact" method="POST">
+        <div class="infos1">
+            <fieldset>
+                <legend>Civilité</legend>
+                <div>
+                    <input type="radio" id="Homme" name="Civilité" value="Homme" checked />
+                    <label for="Homme">Homme</label>
+                </div>
+                <div>
+                    <input type="radio" id="Femme" name="Civilité" value="Femme" />
+                    <label for="Femme">Femme</label>
+                </div>
+                <div>
+                    <input type="radio" id="Autre" name="Civilité" value="Autres" />
+                    <label for="Autres">Autres</label>
+                </div>
+            </fieldset>
+            <div>
+                <label for="Nom">Nom</label>
+                <input type="text" id="Nom" name="Nom" required>
+            </div>
+            <div>
+                <label for="Prénom">Prénom</label>
+                <input type="text" id="Prénom" name="Prénom" required>
+            </div>
+            <div>
+                <label for="telephone">Téléphone</label>
+                <small>(Format: 1234567890)</small>
+            </div>
+            </label>
+            <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
+                required />
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" required>
+            </div>
+            <label for="Pays">Choisissez un pays</label>
+            <select name="pays" id="selection-pays" required>
+                <option value="">--Svp choisissez un pays--</option>
+                <option value="france">france</option>
+                <option value="maroc">maroc</option>
+                <option value="allemagne">allemagne</option>
+                <option value="pays-bas">pays-bas</option>
+                <option value="algerie">algerie</option>
+                <option value="angleterre">angleterre</option>
+                <option value="espagne">espagne</option>
+                <option value="tunisie">tunisie</option>
+                <option value="japon">japon</option>
+                <option value="chine">chine</option>
+                <option value="italie">italie</option>
+                <option value="inde">inde</option>
+                <option value="russie">russie</option>
+                <option value="ukraine">ukraine</option>
+            </select>
+        </div>
+        <div class="infos1">
+            <div>
+                <label for="Sujet">Sujet</label>
+                <input type="text" id="Sujet" name="--Objet de votre demande--" required>
+            </div>
+            <div>
+                <label for="Message">Message</label>
+                <input type="text" id="Message" name="--Ecrivez votre message--" required>
+            </div>
+            <label for="RGPD"></label>
+            <fieldset>
+                <legend>Veuillez accepter le Règlement Général sur la Protection des Données</legend>
+                <div>
+                    <input type="checkbox" id="rgpd" name="rgpd" checked required />
+                    <label for="rgpd"></label>
+                </div>
+                <label for="Submit"></label>
+                <div class="button">
+                    <button type="submit">Envoyer le message</button>
+                </div>
+                <label for="reset"></label>
+                <div class="button">
+                    <button type="reset">Réinitialiser le formulaire</button>
+                </div>
+        </div>
+    </form>
+</body>
+<footer>
+    <a href="mentionslegales">Mentions légales</a>
+</footer>
+
+</html>

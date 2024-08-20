@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du morpion</title>
+    <style>
+        table{
+            margin: 0 auto;
+            width: 1000px;
+        }
+        td{
+            width: 300px;
+            height: 300px;
+            font-size: 120px;
+            text-align: center;
+        }
+        #reset{
+            display: none;
+        }
+        #message{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td id="0" onclick="jouer(this);"></td>
+            <td id="1" onclick="jouer(this);"></td>
+            <td id="2" onclick="jouer(this);"></td>
+        </tr>
+        <tr>
+            <td id="3" onclick="jouer(this);"></td>
+            <td id="4" onclick="jouer(this);"></td>
+            <td id="5" onclick="jouer(this);"></td>
+        </tr>
+        <tr>
+            <td id="6" onclick="jouer(this);"></td>
+            <td id="7" onclick="jouer(this);"></td>
+            <td id="8" onclick="jouer(this);"></td>
+        </tr>
+    </table>
+    <div id="message"></div>
+    <div class="resultat">
+        <div class="score1">Score pour <span id="joueur1"></span> :  <span id="score1"></span></div>
+        <div class="score2">Score pour <span id="joueur2"></span> :  <span id="score2"></span></div>
+        <div class="partie">Partie: <span id="partie"></span></div>
+    </div>
+    <button type="button" name="reset" id="reset">Rejouer</button>
+    <script src="morpion.js"></script>
+</body>
+</html>

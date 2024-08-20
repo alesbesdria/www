@@ -1,0 +1,6 @@
+.container p{
+    color:green
+}
+.container > p{
+    font-weight: bold;
+}

@@ -1,0 +1,55 @@
+Exercice 1:
+Objectif : Écrire une requête pour obtenir la liste des employés avec leur nom complet
+et le nom de leur département. Affichez les colonnes suivantes : employee_id, first_name,
+last_name, et department_name.
+
+
+SELECT employees.employee_id, employees.first_name, employees.last_name, (SELECT departments.department_name FROM departments WHERE departments.department_id = employees.department_id)
+FROM employees
+
+
+
+Exercice 2:
+Objectif : Écrire une requête pour obtenir la liste des employés qui travaillent dans le
+département "Marketing". Affichez les colonnes suivantes : employee_id, first_name, et
+last_name.
+
+
+SELECT employees.employee_id, employees.first_name, employees.last_name, (SELECT departments.department_name FROM departments WHERE departments.department_name = 'Marketing')
+FROM employees
+
+
+Exercice 3:
+Objectif : Écrire une requête pour obtenir la liste des employés qui travaillent dans les
+départements "Sales" ou "HR". Affichez les colonnes suivantes : employee_id, first_name,
+et last_name.
+
+
+
+SELECT employees.employee_id, employees.first_name, employees.last_name
+FROM employees
+WHERE employees.department_id IN (SELECT departments.department_id FROM departments WHERE departments.department_name IN ('Sales','HR'));
+
+
+
+Exercice 4:
+Objectif : Écrire une requête pour obtenir le nombre total d'employés dans chaque
+département. Affichez les colonnes suivantes : department_id et employee_count.
+
+
+SELECT COUNT(employees.employee_id) AS employee_count,  (SELECT departments.department_id FROM departments WHERE employees.department_id = departments.department_id) AS zzz
+FROM employees
+GROUP BY department_id;
+
+
+Exercice 5:
+Objectif : Écrire une requête pour obtenir la liste des employés dont le salaire est
+supérieur à la moyenne des salaires de tous les employés. Supposons que nous avons
+une colonne salary dans la table employees. Affichez les colonnes suivantes : employee_id,
+first_name, last_name, et salary.
+
+
+SELECT employees.employee_id, employees.first_name, employees.last_name, employees.salary FROM employees
+WHERE employees.salary > (SELECT AVG(employees.salary) FROM employees)
+
+                                                                                            

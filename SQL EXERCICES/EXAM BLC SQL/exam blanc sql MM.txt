@@ -1,0 +1,101 @@
+CREATE DATABASE examblc
+
+CREATE TABLE etudiants(
+etudiant_id INT PRIMARY KEY AUTO_INCREMENT, nom VARCHAR(50) NOT NULL,
+prenom VARCHAR(50) NOT NULL,
+date_naissance DATE NOT NULL,
+genre INT(10)
+)
+
+CREATE TABLE cours(
+cours_id INT PRIMARY KEY AUTO_INCREMENT, nom_cours VARCHAR(50) NOT NULL,
+description VARCHAR(150) NOT NULL
+)
+
+CREATE TABLE inscriptions(
+inscription_id INT PRIMARY KEY AUTO_INCREMENT,
+etudiant_id INT(10),
+cours_id INT(10),
+date_inscription DATE,
+    
+FOREIGN KEY (etudiant_id) REFERENCES etudiants(etudiant_id), 
+FOREIGN KEY (cours_id) REFERENCES cours(cours_id)
+) 
+
+INSERT INTO etudiants (etudiant_id,nom, prenom, date_naissance,genre)
+VALUES (1,"Neer","Nee", "1990-01-21", 1),
+  (2,"Gilbert","Gil", "1988-04-20", 2),
+  (3,"Snyder","Sny", "1986-06-25", 3),
+  (4,"Batiste","Bapt", "1998-10-21", 1),
+  (5,"Rhoden","Rod", "1995-02-01", 2),
+  (6,"Lewis","Lee", "1997-01-21", 3),
+  (7,"Knight","Batman", "1987-08-22", 1),
+  (8,"Rivera","River", "1988-11-13", 2),
+  (9,"Lopez","Loop", "1992-07-26", 3),
+  (10,"Griffeth","Griffin", "1995-09-21", 1);
+
+INSERT INTO cours (cours_id, nom_cours, description)
+VALUES (1,"maths","zhzrhthhz"),
+  (2,"francais","rzhhtrheh"),
+  (3,"anglais","rzthhehtjyhhr"),
+  (4,"histoire","rhhhhyyth"),
+  (5,"geo","hzrhzrthhrth"),
+  (6,"sport","rzthrhhrthrt"),
+  (7,"sciences","rzrfaerzgzhh"),
+  (8,"informatique","qfrergagzrg"),
+  (9,"univers","agdghhh"),
+  (10,"meditation","ljcsqbjcdzljvrzloiernlj");
+
+INSERT INTO inscriptions (inscription_id,etudiant_id, cours_id, date_inscription)
+VALUES (1,5,10, "2023-01-21"),
+  (2,4,10,"2024-04-20"),
+  (3,3,3, "2023-06-25"),
+  (4,2,5, "2023-10-21"),
+  (5,1,7, "2023-02-01"),
+  (6,10,8, "2024-01-21"),
+  (7,9,6,"2023-08-22"), 
+  (8,8,4,"2024-11-13"),
+  (9,7,3, "2024-07-26"),
+  (10,6,2, "2022-09-21"),
+  (11,5,8, "2024-09-21"),
+  (12,4,9, "2023-09-21"),
+  (13,3,9, "2023-09-21"),
+  (14,2,7, "2023-09-21"),
+  (15,1,1, "2023-09-21");
+
+
+
+SELECT inscriptions.date_inscription
+FROM inscriptions
+ORDER BY inscriptions.date_inscription;
+
+
+
+SELECT COUNT(inscriptions.inscription_id) AS compteur, cours.nom_cours
+FROM inscriptions
+JOIN cours
+ON cours.cours_id = inscriptions.cours_id
+GROUP BY inscriptions.cours_id;
+
+--------------------------------------------------
+
+SELECT inscriptions.inscription_id, etudiants.nom, inscriptions.inscription_id, etudiants.prenom, cours.nom_cours
+FROM etudiants
+JOIN inscriptions
+ON etudiants.etudiant_id = inscriptions.etudiant_id
+JOIN cours
+ON cours.cours_id = inscriptions.cours_id;
+
+
+
+SELECT employees.employee_id, employees.first_name, employees.last_name, (SELECT departments.department_name FROM departments WHERE departments.department_id = employees.department_id)
+FROM employees
+
+---------------------------------------
+
+
+SELECT COUNT(inscriptions.inscription_id), 
+(SELECT etudiants.nom FROM etudiants WHERE etudiants.etudiant_id = inscriptions.etudiant_id)
+FROM inscriptions
+GROUP BY inscriptions.etudiant_id
+HAVING COUNT(inscriptions.inscription_id) > 1;

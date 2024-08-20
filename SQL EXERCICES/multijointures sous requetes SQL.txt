@@ -1,0 +1,61 @@
+Exercice 1: Jointures Simples
+Télécharger le fichier exercice1.sql
+Questions :
+Sélectionnez tous les clients et leurs commandes associées.
+Affichez les clients qui n'ont pas passé de commandes.
+Obtenez le montant total dépensé par chaque client.
+
+
+
+
+
+Exercice 2: Jointures Multiples
+Télécharger le fichier exercice2.sql
+Questions :
+Sélectionnez tous les employés avec le nom de leur département.
+Obtenez le nombre total d'employés par département.
+Affichez les départements sans employés.
+
+
+
+
+
+Exercice 3: Utilisation de Jointures Externes
+Télécharger le fichier exercice3.sql
+Questions :
+Sélectionnez tous les étudiants et les cours auxquels ils sont inscrits.
+Affichez tous les cours, même s'ils n'ont pas d'étudiants inscrits.
+Obtenez le nombre d'étudiants inscrits à chaque cours.
+
+
+
+
+
+Exercice 4: Jointures avec Agrégation
+Télécharger le fichier exercice4.sql
+Questions :
+Obtenez le montant total dépensé pour chaque client.
+Affichez le client ayant effectué le plus grand montant d'achats.
+Calculez la moyenne des montants dépensés par les clients.
+
+
+
+
+
+Exercice 5: Jointures avec Conditions Complexes
+Télécharger le fichier exercice5.sql
+Questions :
+Sélectionnez les employés du département "Informatique" avec un salaire supérieur à 50000.
+Affichez les employés qui ne sont pas affectés à un département.
+Obtenez le nombre total d'employés dans chaque département avec un salaire supérieur à 40000.
+
+
+
+
+
+Exercice 6: Jointures avec Sous-Requêtes
+Télécharger le fichier exercice6.sql
+Questions :
+Affichez les étudiants inscrits aux cours d'Informatique.
+Sélectionnez les cours pour lesquels aucun étudiant n'est inscrit.
+Obtenez le nombre d'étudiants inscrits à tous les cours d'Informatique

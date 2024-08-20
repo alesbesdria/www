@@ -1,0 +1,83 @@
+Exercice 1
+Écrivez une requête pour obtenir la liste des employés avec le nom de leur
+département. Affichez les colonnes suivantes : employee_id, first_name, last_name, et
+department_name.
+
+
+SELECT employee_id, first_name, last_name, department_name FROM `departments` 
+JOIN employees ON employees.department_id = departments.department_id
+
+
+Exercice 2
+Écrivez une requête pour obtenir la liste des employés avec le nom de leur
+département, incluant les employés qui n'ont pas de département assigné. Affichez les
+colonnes suivantes : employee_id, first_name, last_name, et department_name.
+
+
+SELECT employee_id, first_name, last_name, department_name 
+FROM departments
+FULL JOIN employees ON employees.department_id = departments.department_id
+
+SELECT employee_id,  first_name, last_name, department_name AS 'nomclient'
+FROM departments
+FULL JOIN  employees  USING (department_id)
+
+
+Exercice 3
+Écrivez une requête pour obtenir la liste des départements avec les employés qui y sont
+assignés, incluant les départements qui n'ont pas d'employés. Affichez les colonnes
+suivantes : department_id, department_name, employee_id, first_name, et last_name.
+
+
+SELECT employee_id, departments.department_id, first_name, last_name, department_name 
+FROM departments
+FULL JOIN employees ON employees.department_id = departments.department_id
+
+
+SELECT employee_id,  first_name, last_name, department_name AS 'nomclient'
+FROM employees
+FULL JOIN  departments  USING (department_id)
+
+Exercice 4
+Écrivez une requête pour obtenir toutes les combinaisons possibles d'employés et de
+départements. Affichez les colonnes suivantes : employee_id, first_name, last_name, et
+department_name.
+
+
+SELECT employee_id, departments.department_id, first_name, last_name, department_name 
+FROM departments
+FULL JOIN employees 
+
+
+Exercice 5: Filtrer après une jointure
+Écrivez une requête pour obtenir la liste des employés dont le département est "Ventes".
+Affichez les colonnes suivantes : employee_id, first_name, et last_name.
+
+
+SELECT *
+FROM departments
+JOIN employees ON employees.department_id = departments.department_id
+WHERE department_name = 'Ventes'
+
+SELECT employee_id, first_name, last_name
+FROM departments
+JOIN employees ON employees.department_id = departments.department_id
+WHERE department_name = 'ventes'
+
+
+Exercice 6: Agréger des données après une jointure
+Écrivez une requête pour obtenir le nombre d'employés dans chaque département.
+Affichez les colonnes suivantes : department_name et employee_count.
+
+
+MySQL:3306/dptempl/departments/		http://localhost/phpmyadmin/index.php?route=/table/sql&db=dptempl&table=employees
+La requête SQL a été exécutée avec succès.
+
+SELECT COUNT(departments.department_id)  AS employee_count
+FROM departments
+JOIN employees;
+
+20	 
+
+
+

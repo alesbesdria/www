@@ -1,0 +1,254 @@
+EXERCICE 1
+
+Je crée un programme utilisant un systeme de gestion d'utilisateurs qui tri 
+et permet de rechercher les utilisateurs.
+Je crée 3 tableaux de données utilisateurs, date d'inscriptions et MAIL
+Je crée des tableaux de comparaisons alphabetiques et numeriques ainsi que leurs inverses.
+Auxquels je rajoute des compteurs i j et k  et je les initialisent à zero
+Mon positionNom servira a trier chaque chaine de caractere afin de les trier pour les utlisateurs
+Mon positionDate servira a trier chaque chaine de caractere afin de les trier pour les dates d'inscriptions
+
+
+tableauUt[n][i] <- 0
+tableauDate[n][i] <- 0
+tableauMail[n][i] <- 0
+tableauAlpha["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"] <- 0
+tableauInt[0,1,2,3,4,5,6,7,8,9] <- 0
+tableauAlphareverse["z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a"] <- 0
+tableauIntreverse[9,8,7,6,5,4,3,2,1,0] <- 0
+j <- 0
+positionNom[k] <- O
+positionDate[k] <- 0
+
+-------------------------------------------------------------------------------
+
+
+***************FONCTION TRIS****************
+
+
+//////////////////////////////////////////////
+////////////////Par nom d'utilisateur/////////
+***************************************TRI ALPHA
+
+fonction TriUt(tableauUt[n][i])
+
+TANT QUE tableau[n] != NULL
+
+    TANT QUE tableau[n][i] != NULL
+        TANT QUE tableauAlpha[j] != NULL
+            SI i != j
+                SI i < j ALORS positionNom--
+                FIN SI
+                SI i > j ALORS positionNom++
+                FIN SI
+            j++
+            FIN SI
+        FIN TANT QUE
+    i++
+    FIN TANT QUE
+
+    positionNom[k]++
+    n++
+
+FIN TANT QUE
+
+retourne positionNom
+
+FIN FONCTION
+
+***************************************TRI ALPHA INVERSE
+
+fonction TriUtInverse(tableauUt[n][i])
+
+TANT QUE tableau[n] != NULL
+
+    TANT QUE tableau[n][i] != NULL
+        TANT QUE tableauAlphareverse[j] != NULL
+            SI i != j
+                SI i < j ALORS positionNom--
+                FIN SI
+                SI i > j ALORS positionNom++
+                FIN SI
+            j++
+            FIN SI
+        FIN TANT QUE
+    i++
+    FIN TANT QUE
+
+    positionNom[k]++
+    n++
+
+FIN TANT QUE
+
+retourne positionNom
+
+FIN FONCTION
+
+////////////////Par date d'inscription/////////
+***************************************TRI DATE
+
+//Par date d'inscription
+
+fonction TriDate(tableauDate[n][i])
+
+TANT QUE tableau[n] != NULL
+
+    TANT QUE tableau[n][i] != NULL
+        TANT QUE tableauInt[j] != NULL
+            SI i != j
+                SI i < j ALORS positionDate--
+                FIN SI
+                SI i > j ALORS positionDate++
+                FIN SI
+            j++
+            FIN SI
+        FIN TANT QUE
+    i++
+    FIN TANT QUE
+
+    positionDate[k]++
+    n++
+
+FIN TANT QUE
+
+retourne positionDate
+
+FIN FONCTION
+
+***************************************TRI DATE INVERSE
+fonction TriDate(tableauDate[n][i])
+
+TANT QUE tableau[n] != NULL
+
+    TANT QUE tableau[n][i] != NULL
+        TANT QUE tableauIntReverse[j] != NULL
+            SI i != j
+                SI i < j ALORS positionDate--
+                FIN SI
+                SI i > j ALORS positionDate++
+                FIN SI
+            j++
+            FIN SI
+        FIN TANT QUE
+    i++
+    FIN TANT QUE
+
+    positionDate[k]++
+    n++
+
+FIN TANT QUE
+
+retourne positionDate
+
+FIN FONCTION
+
+-------------------------------------------------------------------------------
+--------------------------------------------------
+
+
+fonction rechercheMail(chaine1)
+------------------->>> DEMOTIVEE
+FIN FONCTION
+
+-------------------------------------------------------------------------------
+--------------------------------------------------
+
+fonction rajoutUt(chaine2)
+JE PRENDS EN PARAMETRE LA CHAINE 2 DE L'utilisateurET JE FAIS APPEL A MA FONCTION DE TRI SUIVANT
+SA DEMANDE TRI NORMAL fonction TriUt Alphabetique OU DE TRI INVERSE TriUtReverse Alphabetique
+OU DE TRI NORMAL PAR DATE fonction TriDate Numerique OU DE TRI ONVERSE fonction TriDateInverse
+Je retourne "Vous avez bien rajoute un nouvel utilisateur"
+FIN FONCTION
+
+-------------------------------------------------------------------------------
+--------------------------------------------------
+
+Je demande à l'utilisateur de rechercher un autre utilisateur PAR MAIL
+chaine1 <- "chaine rentrée par l'utilisateur"
+recherche <- rechercheMail(chaine1)
+AFFICHER LUTILISATEUR RECHERCHé
+
+
+Je demande à l'utilisateur de rajouter un autre utilisateur par nom
+chaine2 <- "chaine rentrée par l'utilisateur"
+rajout <- fonction rajoutUt(chaine2)
+
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+EXERCICE 2
+
+Je crée une fonction qui va rajouter chaque produit du panier dans un tableau
+Fonction rajoutPanier
+Les élèments de paniers se rajoutent grace a un tableau ou j'incremnte les articles a chaque achat
+FIN FONCTION
+
+J'affiche les produits du panier
+Je reprends chaque produits du tableau que j'additonne afin d'afficher le resultat
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+EXERCICE 3
+
+Je stocke chaque données des transactions dans une liste de transactions 
+par dates chrnologiques
+
+Si l'utilisateur le demande
+Je calcule les transactions par((produit+TVA) *nombre d'articles) 
+et je renvoie le résultat
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+EXERCICE 4
+LIRE chainedecaractere des commentaires
+Fonction filtre(chainedecaractere)
+    TANT QUE la lecture de tous les mots des commentaires n'est pas finit
+        LIRE commentaires
+        SI chaque mots == à la liste des mots interdit RETOURNER FAUX "Vous utlisez 
+        des mots interdits, veuillez vous exprimer différement"
+        SINON
+        FIN SI Ne rien retourner tout est ok.
+FIN FONCTION
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+EXERCICE 5
+
+faire programme qui crée un certains nombres de pages suivant nombre d'articles total
+si produits depassent 10 alors créer une nouvelle page
+fin si
+Afficher les 10 produits
+Si clique le bouton suivant alors page suivant
+fin si 
+
+FIN programme

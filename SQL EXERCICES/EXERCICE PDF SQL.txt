@@ -1,0 +1,163 @@
+EXERCICE PDF SQL
+
+EXERCICE 1 :Jointure entre students et classes
+
+Question: Récupérez les noms des étudiants et les noms des classes auxquelles ils
+appartiennent.
+
+Exercice 2 : Jointure entre students et enrollments
+
+Question: Récupérez les noms des étudiants et les identifiants des classes dans
+lesquelles ils sont inscrits.
+
+Exercice 3 : Jointure entre classes et teachers
+
+Question: Récupérez les noms des classes et les noms des enseignants qui les
+enseignent.
+
+Exercice 4 : Jointure entre students et classes avec Condition
+
+Question: Récupérez les noms des étudiants et les noms des classes auxquelles ils
+appartiennent, mais uniquement pour les étudiants ayant plus de 15 ans.
+
+
+SELECT *
+FROM enrollment
+JOIN students ON enrollment.class_id = students.class_id
+WHERE students.age > students.age = 15;
+
+
+Exercice 5 : Jointure entre classes et teachers avec Condition
+
+
+Question: Récupérez les noms des classes et les noms des enseignants qui les
+enseignent, mais uniquement pour les enseignants qui enseignent les mathématiques.
+
+
+SELECT *
+FROM classes
+JOIN teachers ON teachers.id = classes.id
+WHERE teachers.subject = 'mathematique'; //programmation
+
+
+Exercice 6 : Jointure entre students et enrollments avec Condition
+
+Question: Récupérez les noms des étudiants et les identifiants des classes dans
+lesquelles ils sont inscrits, mais uniquement pour les étudiants ayant moins de 18 ans.
+
+SELECT *
+FROM students
+JOIN enrollment ON students.id = enrollment.student_id
+WHERE students.age < 18
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE enrollments(
+student_id INT(100), FOREIGN KEY (student_id) REFERENCES students(id),
+class_id INT(100), FOREIGN KEY (class_id) REFERENCES classes(id)
+)
+
+INSERT INTO students (id,name,age,class_id)
+VALUES (1,'lili',20,1),
+(2,'lily',20,2),
+(3,'liloo',20,3),
+(4,'leeli',20,4),
+(5,'lilou',20,5),
+(6,'lyli',20,6),
+(7,'lilu',20,7),
+(8,'lilo',20,8),
+(9,'lali',20,9),
+(10,'lila',20,10),
+(11,'lolo',20,11),
+(12,'lala',20,12),
+(13,'limi',20,13),
+(14,'lini',20,14),
+(15,'mili',20,15),
+(16,'lili',20,16),
+(17,'lili',20,17),
+(18,'lili',20,18),
+(19,'lili',20,19),
+(20,'lili',20,20),
+(21,'lili',20,21),
+(22,'lili',20,22),
+(23,'lili',20,23),
+(24,'lili',20,24),
+(25,'lili',20,25),
+(26,'lili',20,26),
+(27,'lili',20,27),
+(28,'lili',20,28),
+(29,'lili',20,29),
+(30,'lili',20,30)
+
+
+INSERT INTO enrollments(student_id,class_id)
+VALUES (1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5),
+(6,6),
+(7,7),
+(8,8),
+(9,9),
+(10,10),
+(11,11),
+(12,12),
+(13,13),
+(14,14),
+(15,15),
+(16,16),
+(17,17),
+(18,18),
+(19,19),
+(20,20),
+(21,21),
+(22,22),
+(23,23),
+(24,24),
+(25,25),
+(26,26),
+(27,27),
+(28,28),
+(29,29),
+(30,30),
+(31,31),
+(32,32),
+(33,33),
+(34,34),
+(35,35),
+(36,36),
+(37,37),
+(38,38),
+(39,39),
+(40,40),
+(41,41),
+(42,42),
+(43,43),
+(44,44),
+(45,45),
+(46,46),
+(47,47),
+(48,48),
+(49,49),
+(50,50),
+(51,51),
+(52,52),
+(53,53),
+(54,54),
+(55,55),
+(56,56),
+(57,57),
+(58,58),
+(59,59),
+(60,60)
+
+

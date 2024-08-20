@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        {# -----------------------------------MODELE------------------------------------------- #}
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+            <header>
+
+            </header>
+            <nav>
+
+            </nav>
+            <aside>
+
+            </aside>
+            <main>
+                <section>
+
+                </section>
+            </main>
+            <footer>
+
+            </footer>
+        </body>
+
+        </html>
+        {# -----------------------------------MODELE------------------------------------------- #}
+
+
+
+        {# -----------------------------------BHREF------------------------------------------- #}
+
+        <div class="twitter">
+            <a class="accueillog" href="index.html"><img src="assets/icones/" alt="twitter" id="twitter"></a>
+            <a class="accueil" id="accueil" href="index.html">Accueil</a>
+        </div>
+        {# -----------------------------------BHREF------------------------------------------- #}
+
+    </header>
+    <nav>
+
+
+        {# -----------------------------------NAV------------------------------------------- #}
+
+        <nav class="listprod">
+            <ul class="section1">
+                <li class="femmes"><span class="titrefemmes">FEMMES</span></li>
+                <ul>
+                    <li>
+                        <a class="sstitre" href="#chaussure">Chaussures</a>
+                    </li>
+                    <li>
+                        <a class="sstitre" href="#sac">Sacs à main</a>
+                    </li>
+                    <li>
+                        <a class="sstitre" href="#lingerie">Lingeries</a>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            <ul class="section2">
+                <li class="hommes"><span class="titrehommes">HOMMES</span></li>
+                <ul>
+                    <li>
+                        <a class="sstitre" href="#chaussureh">Chaussures</a>
+                    </li>
+                    <li>
+                        <a class="sstitre" href="#access">Accessoires</a>
+                    </li>
+                    <li>
+                        <a class="sstitre" href="#montres">Montres</a>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+
+        -----------------------------------NAV-------------------------------------------
+
+
+        <nav class="mobile">
+            <select name="menuderoule" id="Menu déroulant">
+                <option value="Menu">--Menu--</option>
+                <option value="index">Accueil</option>
+                <option value="galerie">Galerie</option>
+                <option value="contact">Contact</option>
+                <option value="services">Services</option>
+            </select>
+        </nav>
+        -----------------------------------NAV-------------------------------------------
+
+        <nav class="desktop">
+            <a class="menu" id="accueil" href="index.html">Menu accueil</a>
+            <a class="menu" id="Galerie" href="galerie.html">Galerie</a>
+            <a class="menu" id="Contact" href="contact.html">Contact</a>
+            <a class="menu" id="Nos services" href="services.html">Nos services</a>
+        </nav>
+        {# -----------------------------------NAV------------------------------------------- #}
+
+
+    </nav>
+    <main>
+        {# -----------------------------------IMAGES-VIDEOS------------------------------------------- #}
+
+        
+            <img class="image" src="assets/image/1.jpg" alt="image 1" id="image1">
+		
+		
+        ------------------------------------------------------------------------------
+        <title></title>
+        <video autoplay controls width="500" alt="" ???> {# ou le width peut être géré ds css #}
+            <source type="video/mp4" src="assets/video/mp4/">
+            <source type="video/webm" src="assets/video/webm/">
+        </video>
+
+        {# -----------------------------------IMAGES-VIDEOS------------------------------------------- #}
+
+
+        {# -----------------------------------FORM------------------------------------------- #}
+
+
+        <form action="contact" method="POST">
+
+            <div class="grid-container">
+                <div class="item1">
+                    <fieldset>
+                        <legend>Civilité</legend>
+                        <div>
+                            <input type="radio" id="Homme" name="Civilité" value="Homme" checked />
+                            <label for="Homme">Homme</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Femme" name="Civilité" value="Femme" />
+                            <label for="Femme">Femme</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Autre" name="Civilité" value="Autres" />
+                            <label for="Autres">Autres</label>
+                        </div>
+                    </fieldset>
+
+                </div>
+                <div class="item5">
+                    <div>
+                        <label for="Nom">Nom</label>
+                        <input type="text" id="Nom" name="Nom" required>
+                    </div>
+                    <div>
+                        <label for="Prénom">Prénom</label>
+                        <input type="text" id="Prénom" name="Prénom" required>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div>
+                        <label for="telephone">Téléphone <br></label>
+                        <small>(Format: 1234567890)</small>
+                    </div>
+                    </label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
+                        required />
+                    <div>
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" name="Email" required>
+                    </div>
+                </div>
+                <div class="item3">
+                    <div class="infos1">
+                        <div>
+                            <label for="Sujet">Sujet</label>
+                            <input type="text" id="Sujet" name="--Objet de votre demande--" required>
+                        </div>
+                        <div>
+                            <label for="Message">Message</label>
+                            <input type="text" id="Message" name="--Ecrivez votre message--" required>
+                            <textarea name="messagesss" id="messagesss" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="item4">
+                    <label for="RGPD"></label>
+                    <fieldset>
+                        <legend>Veuillez accepter le Règlement Général sur la Protection des Données</legend>
+                        <div>
+                            <input type="checkbox" id="rgpd" name="rgpd" checked required />
+                            <label for="rgpd"></label>
+                        </div>
+                        <label for="Submit"></label>
+                        <div class="button">
+                            <button type="submit">Envoyer le message</button>
+                        </div>
+                        <label for="reset"></label>
+                        <div class="button">
+                            <button type="reset">Réinitialiser le formulaire</button>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+        </form>
+
+        {# -----------------------------------FORM------------------------------------------- #}
+        {# -----------------------------------TABLEAU------------------------------------------- #}
+
+        <table>
+            <tr>
+                <td>Services offerts:
+                    <p>Service 1</p>
+                    <p>Service 2</p>
+                    <p>Service 3</p>
+                </td>
+                <td>Projets récents :
+                    <a href="#">Lien 1</a>
+                    <a href="#">Lien 2</a>
+                    <a href="#">Lien 3</a>
+                    <a href="#">Lien 4</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Tarifs:
+                    <p>Tarif 1</p>
+                    <p>Tarif 2</p>
+                    <p>Tarif 3</p>
+                    <p>Tarif 4</p>
+                    <p>Tarif 5</p>
+                </td>
+                <td>Per copiis iam tamen horrebant inediae flumen rerum exitialis solitarum adfluebant per
+                    adfluebant
+                    quidem quod aerumnas adfluebant captis propinquantis inediae.
+                    <aside> <small>Periculo habere sentit ab oportere nobis in sentit omni pacis.</small></aside>
+                </td>
+            </tr>
+        </table>
+        {# -----------------------------------TABLEAU------------------------------------------- #}
+
+        {# -----------------------------------MENTIONS------------------------------------------- #}
+        <details>
+            <summary>Mentions légales</summary>
+            Congeratur amicitiam enim verendum quidem Divitior in vocare videtur terram nec exiliter in vera ac et
+            amicitia est quid exiliter in plus aut amicitiam ne definit vocare ne affluentior quid paribus voluntatibus
+            congeratur exigue neque exigue sit videtur aut aut quidem neque paribus vera excidat quid reddat ne paribus
+            est.
+        </details>
+        <details>
+            <summary>CGV</summary>
+            Congeratur amicitiam enim verendum quidem Divitior in vocare videtur terram nec exiliter in vera ac et
+            amicitia est quid exiliter in plus aut amicitiam ne definit vocare ne affluentior quid paribus voluntatibus
+            congeratur exigue neque exigue sit videtur aut aut quidem neque paribus vera excidat quid reddat ne paribus
+            est.
+        </details>
+        <details>
+            <summary>Politique de confidentialité</summary>
+            Congeratur amicitiam enim verendum quidem Divitior in vocare videtur terram nec exiliter in vera ac et
+            amicitia est quid exiliter in plus aut amicitiam ne definit vocare ne affluentior quid paribus voluntatibus
+            congeratur exigue neque exigue sit videtur aut aut quidem neque paribus vera excidat quid reddat ne paribus
+            est.
+        </details>
+        <details>
+            <summary>RGPD</summary>
+            Congeratur amicitiam enim verendum quidem Divitior in vocare videtur terram nec exiliter in vera ac et
+            amicitia est quid exiliter in plus aut amicitiam ne definit vocare ne affluentior quid paribus voluntatibus
+            congeratur exigue neque exigue sit videtur aut aut quidem neque paribus vera excidat quid reddat ne paribus
+            est.
+        </details>
+        {# -----------------------------------MENTIONS------------------------------------------- #}
+
+        <a class="facebook" href="https://www.facebook.com/"><img src="assets/icones/" alt="bouton facebook" id="facebook"></a>
+        <a class="twitter" href="https://twitter.com/?lang=fr"><img src="assets/icones/" alt="bouton twitter" id="twitter"></a>
+        <a class="instagram" href="https://www.instagram.com/"><img src="assets/icones/" alt="bouton instagram" id="instagram"></a>
+        <a class="youtube" href="https://www.youtube.com/"><img src="assets/icones/" alt="bouton youtube" id="youtube"></a>
+        <a class="tiktok" href="https://www.tiktok.com/explore?lang=fr"><img src="assets/icones/" alt="bouton tiktok" id="tiktok"></a>
+        <a class="pinterest" href="https://www.pinterest.fr/"><img src="assets/icones/" alt="bouton pinterest" id="pinterest"></a>
+
+
+
+        {# -----------------------------------MENTIONS------------------------------------------- #}
+
+    </main>
+    <aside>
+
+    </aside>
+    <footer>
+
+        <div class="adresse">
+            <address>Adresse: <br> 666, Highway to Hell <br>45000 PARADISE</address>
+        </div>
+
+        <p>&copy; 2023 mon blog</p>
+        {# -----------------------------------MENTIONS------------------------------------------- #}
+        <a href="mentions.html">Mentions légales</a>
+        {# -----------------------------------MENTIONS------------------------------------------- #}
+
+
+    </footer>
+</body>
+
+</html>

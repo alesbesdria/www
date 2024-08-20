@@ -1,0 +1,92 @@
+EXERCICE 1
+
+Je crée un programme qui permet d'ajouter afficher et supprimer des évènements 
+à un calendrier.
+
+Lorsque l'utilisateur clique sur une date il a le choix :
+-de rajouter un évènement qui sera stocké dans une base de données et 
+sera automatiquement affiché dans le calendrier.
+-de cliquer sur un évènement afin de supprimer l'évènement en un click avec une boite
+de confirmation de suppression.
+-ou simplement de cliquer sur un evenement et l'afficher.
+
+fonction event
+
+SI l'utilisateur click sur une date 
+
+    AFFICHER les évènements de cette date
+
+    SI bouton rajouter 
+    ALORS il rentre une chaine de caractere qui sera stocké dans une base de données
+    et sera rajouté à cette date et affiché dans le calendrier
+    FIN SI
+
+    SI utilisateur clique sur un evenement et bouton supprimer 
+    ALORS afficher une boite de confirmation de suppression
+        SI utilisateur clique sur valider
+        ALORS suppression de l'évènement
+        FIN SI
+    FIN SI
+
+FIN SI
+
+FIN FONCTION
+
+****************************************************************************
+****************************************************************************
+****************************************************************************
+****************************************************************************
+
+EXERCICE 2
+
+fonction cptIP
+
+POUR CHAQUE ouverture de la page par un utilisateur
+    Je stocke l'adresse IP dans une base de données qui rajoute au compteur
+    un élèment afin de connaître le nombre de visites du site
+FIN POUR CHAQUE
+    Je retourne le nombre de visites
+FIN FONCTION
+
+****************************************************************************
+****************************************************************************
+****************************************************************************
+****************************************************************************
+
+EXERCICE 3
+
+fonction moyenne
+
+POUR CHAQUE note rentrée pour un article je compte et le nombre de notes 
+et la valeur de la note 
+Je divise le total des valeurs notes par le nombre de notes rentrées.
+FIN POUR CHAQUE 
+
+Je retourne la moyenne de l'article 
+
+FIN FONCTION 
+
+****************************************************************************
+****************************************************************************
+****************************************************************************
+****************************************************************************
+
+EXERCICE 4
+
+fonction rajoutArticles
+Je demande à l'utilisateur de rajouter un article
+FIN FONCTION
+
+fonction rajoutComms
+Je demande à l'utilisateur de rajouter un commentaire et j'affiche le commentaire 
+FIN FONCTION
+
+****************************************************************************
+****************************************************************************
+****************************************************************************
+****************************************************************************
+
+EXERCICE 5
+
+fonction 
+FIN FONCTION

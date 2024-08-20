@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoi de donnée en AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Formulaire inscription</h1>
+    <div id="retour"></div>
+    <div id="serialize"></div>
+    <form method="POST" action="" id="inscription">
+        <div>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom">
+        </div>
+        <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <button type="submit" name="submit">Envoyer</button>
+    </form>
+    <script src="formulaire_ajax.js"></script>
+</body>
+</html>
